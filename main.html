@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class = "app-card">
+<div class="container">
+
+    <div class="header">
+    <img src="tuff.png" alt="Logo" class="logo">
+    <h1>Tuff Product Inventory System</h1>
+    </div>
+
+    <div class="menu">
+        <button onclick="showSection('add')">Add Item</button>
+        <button onclick="viewItems()">View Items</button>
+        <button onclick="showSection('update')">Update Qty</button>
+        <button onclick="showSection('delete')">Delete</button>
+        <button onclick="showSection('search')">Search</button>
+        <button onclick="showValue()">Total Value</button>
+        <button onclick="exitSystem()">Exit</button>
+    </div>
+
+    <!-- ADD -->
+    <div id="add" class="card hidden">
+        <h3>Add Item</h3>
+        <input id="aCode" placeholder="Item Code">
+        <input id="aName" placeholder="Item Name">
+        <input id="aPrice" type="number" placeholder="Price">
+        <input id="aQty" type="number" placeholder="Quantity">
+        <button onclick="addItem()">Submit</button>
+        <p class="msg" id="addMsg"></p>
+    </div>
+
+    <!-- UPDATE -->
+    <div id="update" class="card hidden">
+        <h3>Update Quantity</h3>
+        <input id="uCode" placeholder="Item Code">
+        <input id="uQty" type="number" placeholder="New Quantity">
+        <button onclick="updateQty()">Update</button>
+        <p class="msg" id="updateMsg"></p>
+    </div>
+
+    <!-- DELETE -->
+    <div id="delete" class="card hidden">
+        <h3>Delete Item</h3>
+        <input id="dCode" placeholder="Item Code">
+        <button onclick="deleteItem()">Delete</button>
+        <p class="msg" id="deleteMsg"></p>
+    </div>
+
+    <!-- SEARCH -->
+    <div id="search" class="card hidden">
+        <h3>Search Item</h3>
+        <input id="sCode" placeholder="Item Code">
+        <button onclick="searchItem()">Search</button>
+        <div id="searchResult"></div>
+    </div>
+
+    <div id="output"></div>
+
+    <div id="welcome" class="card">
+    <h3>Hello, this is Tuff's Product Inventory System</h3>
+    <p>Options above will help you manage your inventory.</p>
+    </div>
+
+    <div id="exitMsg" class="card hidden">
+    <h3>Goodbye</h3>
+    <p>You have exited the Tuff Product Inventory System.</p>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+
+<footer class="footer">
+    <p>© 2025 Tuff Product Inventory System | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
